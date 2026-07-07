@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gontrel — She's Still Scrolling? Storyboard</title>
+<style>
+  @page { size: letter; margin: 0; }
+  :root {
+    --cornflower: #6495ED;
+    --cornflower-dark: #4A7FE0;
+    --cornflower-deep: #3A63C4;
+    --cornflower-pale: #EEF3FF;
+    --cornflower-line: #D6E2FA;
+    --ink: #1B2540;
+    --ink-soft: #52607E;
+    --white: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--white);
+    background: linear-gradient(160deg, var(--cornflower) 0%, var(--cornflower-deep) 55%, var(--cornflower-deep) 100%);
+  }
+  .page { padding: 46px 58px 40px 58px; }
+
+  .appbar {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 22px;
+    padding: 30px 34px 26px 34px;
+    color: var(--white);
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  .appbar::after {
+    content: "";
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.10);
+  }
+  .appbar::before {
+    content: "";
+    position: absolute;
+    bottom: -70px; right: 40px;
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+  }
+  .app-tag {
+    display: inline-block;
+    font-size: 10.5px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    background: rgba(255,255,255,0.18);
+    padding: 5px 12px;
+    border-radius: 100px;
+    margin-bottom: 14px;
+  }
+  .app-title {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin: 0 0 6px 0;
+  }
+  .app-subtitle {
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 400;
+    opacity: 0.95;
+    margin: 0 0 18px 0;
+  }
+  .meta-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+  }
+  .meta-chip {
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  .scene-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 16px;
+    padding: 20px 24px 22px 24px;
+    margin-bottom: 18px;
+  }
+  .scene-images {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .scene-images img {
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.25);
+    max-height: 200px;
+    width: auto;
+    display: block;
+  }
+  .scene-card .action {
+    clear: both;
+  }
+  .scene-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px; height: 26px;
+    background: var(--white);
+    color: var(--cornflower-deep);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 800;
+    margin-right: 10px;
+  }
+  .scene-heading {
+    display: flex;
+    align-items: center;
+    font-size: 13.5px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 0 0 12px 0;
+  }
+  .action {
+    font-style: italic;
+    color: rgba(255,255,255,0.75);
+    font-size: 12.5px;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+  }
+  .dialogue-block {
+    margin: 10px 0 10px 14px;
+    padding-left: 14px;
+    border-left: 3px solid rgba(255,255,255,0.35);
+  }
+  .character {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 0.4px;
+    margin: 0 0 2px 0;
+  }
+  .parenthetical {
+    font-size: 11px;
+    font-style: italic;
+    color: rgba(255,255,255,0.65);
+    margin: 0 0 3px 0;
+  }
+  .dialogue {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--white);
+    margin: 0;
+  }
+  .beat-note {
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.75);
+    font-style: italic;
+    margin: 8px 0;
+  }
+
+  .closing-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 26px 28px;
+    text-align: center;
+    color: var(--cornflower-deep);
+    margin-top: 6px;
+    margin-bottom: 18px;
+  }
+  .tagline {
+    font-size: 19px;
+    font-weight: 800;
+    font-style: italic;
+    margin: 0 0 6px 0;
+    color: var(--cornflower-deep);
+  }
+  .logo-line {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    opacity: 0.8;
+    text-transform: uppercase;
+    color: var(--cornflower-deep);
+  }
+
+  .prod-note {
+    background: rgba(255,255,255,0.07);
+    border: 1.5px dashed rgba(255,255,255,0.35);
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 10.5px;
+    color: rgba(255,255,255,0.8);
+    font-style: italic;
+    line-height: 1.6;
+  }
+  .prod-note b {
+    color: var(--white);
+    font-style: normal;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 9.5px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 1px;
+    margin-top: 22px;
+    text-transform: uppercase;
+  }
+</style>
+<body>
+<div class="page">
+
+  <div class="appbar">
+    <div class="app-tag">GONTREL &nbsp;·&nbsp; STORYBOARD</div>
+    <div class="app-title">She's Still Scrolling?</div>
+    <div class="app-subtitle">Turtle &amp; Hare concept</div>
+    <div class="meta-row">
+      <div class="meta-chip">CAST: 4 FEMALE TALENT</div>
+      <div class="meta-chip">RUNTIME: 35 SEC MAX</div>
+      <div class="meta-chip">LOCATIONS: OFFICE · SALON · RESTAURANT</div>
+    </div>
+  </div>
+
+  <div class="scene-card">
+    <div class="scene-heading" style="justify-content:space-between;">
+      <span><span class="scene-number">1</span>OFFICE (INT.) — ESTABLISHING &amp; CHAOTIC</span>
+      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:00 – 0:08</span>
+    </div>
+    <div class="scene-images">
+      <img src="Scene 1/1.jpeg" alt="Scene 1 storyboard 1">
+      <img src="Scene 1/2.png" alt="Scene 1 storyboard 2">
+      <img src="Scene 1/58252402-f112-4858-a758-70b695fa0748_fs.gif" alt="Scene 1 storyboard 3">
+    </div>
+    <p class="action">Quick close-ups on Girl A and Girl B at their workstations, wrapping up the day — brief, ordinary energy, no lingering. It then tips fast into chaos: both scrambling across two devices, phone and laptop. 3D screen projections show rapid scrolling on each. Talking over each other, not in sync.</p>
+    <div class="dialogue-block">
+      <p class="character">GIRL B</p>
+      <p class="dialogue">"This one's too far."</p>
+    </div>
+    <div class="dialogue-block">
+      <p class="character">GIRL A</p>
+      <p class="dialogue">"Wait, what about this—"</p>
+    </div>
+  </div>
+
+  <div class="scene-card">
+    <div class="scene-heading" style="justify-content:space-between;">
+      <span><span class="scene-number">2</span>NAIL SALON (INT.) — CALM</span>
+      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:08 – 0:13</span>
+    </div>
+    <div class="scene-images">
+      <img src="Scene 2/1.jpeg" alt="Scene 2 storyboard 1">
+      <img src="Scene 2/2.jpeg" alt="Scene 2 storyboard 2">
+    </div>
+    <p class="action" style="margin:0;">Camera cuts to nail salon scene. Girl C relaxed, getting nails done by Girl D (whose face is not shown). Small 3D phone-screen projection — one confident scroll on Gontrel, booked in a couple of taps. Sets phone down, continues to do her nails at ease.</p>
+  </div>
+
+  <div class="scene-card">
+    <div class="scene-heading" style="justify-content:space-between;">
+      <span><span class="scene-number">3</span>OFFICE (INT.) — RUSHED</span>
+      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:13 – 0:19</span>
+    </div>
+    <div class="scene-images">
+      <img src="Scene 3/1.gif" alt="Scene 3 storyboard 1">
+      <img src="Scene 3/2.gif" alt="Scene 3 storyboard 2">
+    </div>
+    <p class="action">Camera cuts back to the office. Papers are flying all around the room. Girl A lands on a place, scrambling to pull up Google Maps for the route. Bags grabbed fast, frantic energy.</p>
+    <div class="dialogue-block">
+      <p class="character">GIRL A</p>
+      <p class="dialogue">"We have to go now!"</p>
+    </div>
+    <div class="dialogue-block">
+      <p class="character">GIRL B</p>
+      <p class="dialogue">"Wait, is it even the right location?"</p>
+    </div>
+    <div class="dialogue-block">
+      <p class="character">GIRL A</p>
+      <p class="dialogue">"Just go, go, go!"</p>
+    </div>
+  </div>
+
+  <div class="scene-card">
+    <div class="scene-heading" style="justify-content:space-between;">
+      <span><span class="scene-number">4</span>TRANSITION TO RESTAURANT</span>
+      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:19 – 0:23</span>
+    </div>
+    <p class="action">Quick cut back to the nail salon — Girl C's chair is empty, she already left. Girl D cleaning up, unbothered. Straight cut to exterior restaurant: Girl A and Girl B finally arrive together, flustered, catching their breath.</p>
+    <div class="dialogue-block">
+      <p class="character">GIRL B</p>
+      <p class="dialogue">"Wait—"</p>
+    </div>
+    <div class="dialogue-block">
+      <p class="character">GIRL A</p>
+      <p class="dialogue">"Is that?"</p>
+    </div>
+  </div>
+
+  <div class="scene-card">
+    <div class="scene-heading" style="justify-content:space-between;">
+      <span><span class="scene-number">5</span>INTERIOR RESTAURANT</span>
+      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:23 – 0:35</span>
+    </div>
+    <div class="scene-images">
+      <img src="Scene 5/ending.gif" alt="Scene 5 storyboard">
+    </div>
+    <p class="action">Girl A and Girl B arrive outside the restaurant and spot Girl C already seated through the window/door. A waiter approaches Girl C's table. Camera cuts to a wider, further-away shot showing Girl C and the waiter mid-conversation as Girl A and Girl B walk up to join them. Their dialogue plays in the background as they approach. Closing shot: phone on the table, Gontrel app visible, everyone softly out of focus behind it.</p>
+    <div class="dialogue-block">
+      <p class="character">WAITER</p>
+      <p class="dialogue">"How did you find out about us?"</p>
+    </div>
+    <div class="dialogue-block">
+      <p class="character">GIRL C</p>
+      <p class="parenthetical">(background, as the others approach)</p>
+      <p class="dialogue">"Gontrel."</p>
+    </div>
+    <div class="dialogue-block">
+      <p class="character">GIRL A</p>
+      <p class="dialogue">"Should have just used that."</p>
+    </div>
+    <div class="dialogue-block">
+      <p class="character">GIRL C (V.O.)</p>
+      <p class="parenthetical">(voice over)</p>
+      <p class="dialogue">"Stop scrolling. Start eating."</p>
+    </div>
+  </div>
+
+  <div class="closing-card">
+    <p class="tagline">Gontrel</p>
+    <p class="logo-line">0:33–0:35</p>
+  </div>
+
+  <div class="prod-note">
+    <b>Production note:</b> Turtle &amp; hare concept — Gontrel (calm/direct) vs. multi-app chaos (TikTok, Google Maps, OpenTable). Girl D's face is not shown on camera. Slogan "Stop scrolling. Start eating." is delivered as a voice over (V.O.) closing line, rather than shown as an on-screen tagline card. Total scripted runtime: 35 seconds, hitting the agreed max.
+  </div>
+
+  <div class="footer">Magnus Forever · Production Script</div>
+
+</div>
+</body>
+</html>
