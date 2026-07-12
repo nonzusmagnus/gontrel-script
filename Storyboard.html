@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gontrel — She's Still Scrolling? Storyboard</title>
 <style>
   @page { size: letter; margin: 0; }
@@ -221,6 +222,30 @@
     margin-top: 22px;
     text-transform: uppercase;
   }
+
+  @media (max-width: 600px) {
+    .page { padding: 16px 12px 24px 12px; }
+    .appbar { padding: 18px 16px 16px 16px; }
+    .app-title { font-size: 24px; }
+    .app-subtitle { font-size: 14px; }
+    .meta-chip { font-size: 9px; padding: 4px 10px; }
+    .scene-card { padding: 14px 14px 16px 14px; }
+    .scene-images img { max-height: 160px; width: 100%; object-fit: cover; }
+    .scene-heading { font-size: 11px; flex-wrap: wrap; gap: 4px; }
+    .action { font-size: 11px; }
+    .dialogue { font-size: 11.5px; }
+    .closing-card { padding: 18px 16px; }
+    .tagline { font-size: 16px; }
+  }
+  @media (max-width: 400px) {
+    .page { padding: 10px 8px 20px 8px; }
+    .appbar { padding: 14px 12px 12px 12px; border-radius: 14px; }
+    .app-title { font-size: 20px; }
+    .app-tag { font-size: 8.5px; padding: 3px 8px; }
+    .scene-card { padding: 10px 10px 12px 10px; border-radius: 12px; }
+    .scene-images img { max-height: 120px; }
+    .scene-number { width: 22px; height: 22px; font-size: 10px; }
+  }
 </style>
 <body>
 <div class="page">
@@ -238,87 +263,76 @@
 
   <div class="scene-card">
     <div class="scene-heading" style="justify-content:space-between;">
-      <span><span class="scene-number">1</span>OFFICE (INT.) — ESTABLISHING &amp; CHAOTIC</span>
-      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:00 – 0:08</span>
+      <span><span class="scene-number">1</span>OFFICE (INT.) — REVEALING</span>
+      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:00 – 0:05</span>
     </div>
     <div class="scene-images">
-      <img src="Scene 1/1.jpeg" alt="Scene 1">
-      <img src="Scene 1/2.png" alt="Scene 1">
-      <img src="Scene 1/58252402-f112-4858-a758-70b695fa0748_fs.gif" alt="Scene 1">
+      <img src="Scene 1/1.gif" alt="Scene 1">
+      <img src="Scene 1/2.jpeg" alt="Scene 1">
     </div>
-    <p class="action">Quick close-ups on Girl A and Girl B at their workstations, wrapping up the day — brief, ordinary energy, no lingering. It then tips fast into chaos: both scrambling across two devices, phone and laptop. 3D screen projections show rapid scrolling on each. Talking over each other, not in sync.</p>
-    <div class="dialogue-block">
-      <p class="character">GIRL B</p>
-      <p class="dialogue">"This one's too far."</p>
-    </div>
-    <div class="dialogue-block">
-      <p class="character">GIRL A</p>
-      <p class="dialogue">"Wait, what about this—"</p>
-    </div>
+    <p class="action"><b>Shot 1.1</b> — Slow pull-out revealing shot of girls in the office.<br>
+    <b>Shot 1.2</b> — Close up of phone groupchat.<br>
+    <b>Shot 1.3</b> — Closing shot where 2 girls look at each other.</p>
   </div>
 
   <div class="scene-card">
     <div class="scene-heading" style="justify-content:space-between;">
-      <span><span class="scene-number">2</span>NAIL SALON (INT.) — CALM</span>
-      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:08 – 0:13</span>
+      <span><span class="scene-number">2</span>OFFICE (INT.) → NAIL SALON (INT.)</span>
+      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:05 – 0:12</span>
     </div>
     <div class="scene-images">
       <img src="Scene 2/1.jpeg" alt="Scene 2">
       <img src="Scene 2/2.jpeg" alt="Scene 2">
+      <img src="Scene 2/3.jpeg" alt="Scene 2">
     </div>
-    <p class="action" style="margin:0;">Camera cuts to nail salon scene. Girl C relaxed, getting nails done by Girl D (whose face is not shown). Small 3D phone-screen projection — one confident scroll on Gontrel, booked in a couple of taps. Sets phone down, continues to do her nails at ease.</p>
+    <p class="action"><b>Shot 2.1</b> — Cut to over-the-shoulder phone shot of them scrolling on phone and laptop through TikTok &amp; Google Maps.<br>
+    <b>Shot 2.2</b> — Cut to Girl C at Nail Tech.<br>
+    <b>Shot 2.3</b> — Over-the-shoulder shot of nail tech doing Girl C's nails.</p>
   </div>
 
   <div class="scene-card">
     <div class="scene-heading" style="justify-content:space-between;">
       <span><span class="scene-number">3</span>OFFICE (INT.) — RUSHED</span>
-      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:13 – 0:19</span>
+      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:12 – 0:20</span>
     </div>
     <div class="scene-images">
       <img src="Scene 3/1.gif" alt="Scene 3">
       <img src="Scene 3/2.gif" alt="Scene 3">
       <img src="Scene 3/3.gif" alt="Scene 3">
     </div>
-    <p class="action">Camera cuts back to the office. Papers are flying all around the room. Girl A lands on a place, scrambling to pull up Google Maps for the route. Bags grabbed fast, frantic energy.</p>
-    <div class="dialogue-block">
-      <p class="character">GIRL A</p>
-      <p class="dialogue">"We have to go now!"</p>
-    </div>
+    <p class="action"><b>Shot 3.1</b> — Slow motion shot of girls scrambling, throwing paper in the air. "Okay book it then."<br>
+    <b>Shot 3.2</b> — Close up phone shot of Girl C Booking on Gontrel.<br>
+    <b>Shot 3.3</b> — Cut to close up phone shots of Open Table, notification from Girl C on phone: "We're booked. Pen and player. 6pm"</p>
     <div class="dialogue-block">
       <p class="character">GIRL B</p>
-      <p class="dialogue">"Wait, is it even the right location?"</p>
+      <p class="dialogue">"She booked it."</p>
     </div>
+    <p class="action"><b>Shot 3.4</b> — Girls stop and look at each other. Then grab things and run.</p>
     <div class="dialogue-block">
       <p class="character">GIRL A</p>
-      <p class="dialogue">"Just go, go, go!"</p>
+      <p class="dialogue">"We need to go now."</p>
     </div>
   </div>
 
   <div class="scene-card">
     <div class="scene-heading" style="justify-content:space-between;">
       <span><span class="scene-number">4</span>TRANSITION TO RESTAURANT</span>
-      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:19 – 0:23</span>
+      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:20 – 0:25</span>
     </div>
     <div class="scene-images">
       <img src="Scene 4/1.jpeg" alt="Scene 4">
       <img src="Scene 4/2.gif" alt="Scene 4">
       <img src="Scene 4/3.gif" alt="Scene 4">
     </div>
-    <p class="action">Quick cut back to the nail salon — Girl C's chair is empty, she already left. Girl D cleaning up, unbothered. Straight cut to exterior restaurant: Girl A and Girl B finally arrive together, flustered, catching their breath.</p>
-    <div class="dialogue-block">
-      <p class="character">GIRL B</p>
-      <p class="dialogue">"Wait—"</p>
-    </div>
-    <div class="dialogue-block">
-      <p class="character">GIRL A</p>
-      <p class="dialogue">"Is that?"</p>
-    </div>
+    <p class="action"><b>Shot 4.1</b> — Cut back to nail salon: empty chair.<br>
+    <b>Shot 4.2</b> — Two girls walking in heels in a hurry. Low angle 2D tracking shot of legs and shoes.<br>
+    <b>Shot 4.3</b> — Establishing shot of venue, Girl A pulls Girl B to the entrance of restaurant.</p>
   </div>
 
   <div class="scene-card">
     <div class="scene-heading" style="justify-content:space-between;">
       <span><span class="scene-number">5</span>INTERIOR RESTAURANT</span>
-      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:23 – 0:35</span>
+      <span style="font-weight:700; font-size:11px; opacity:0.85;">0:25 – 0:35</span>
     </div>
     <div class="scene-images">
       <img src="Scene 5/1.jpeg" alt="Scene 5">
@@ -327,34 +341,29 @@
       <img src="Scene 5/4.jpeg" alt="Scene 5">
       <img src="Scene 5/5.gif" alt="Scene 5">
     </div>
-    <p class="action">Girl A and Girl B arrive outside the restaurant and spot Girl C already seated through the window/door. A waiter approaches Girl C's table. Camera cuts to a wider, further-away shot showing Girl C and the waiter mid-conversation as Girl A and Girl B walk up to join them. Their dialogue plays in the background as they approach. Closing shot: phone on the table, Gontrel app visible, everyone softly out of focus behind it.</p>
+    <p class="action"><b>Shot 5.1</b> — Slow pull-out revealing shot on the gimbal showing Girl C seated in the restaurant.<br>
+    <b>Shot 5.2</b> — Girls walking into the restaurant, handheld.<br>
+    <b>Shot 5.3</b> — B-roll shots of the restaurant, girls recording cocktails, laughing together, food, handheld 24mm.<br>
+    <b>Shot 5.4</b> — Waiter comes up to them and asks "How did you find out about us?"<br>
+    <b>Shot 5.5</b> — Girl A and Girl B look at each other. Girl C responds: Gontrel.<br>
+    <b>Shot 5.6</b> — Tripod shot of full venue, wide-angle 8mm lens with title card.</p>
     <div class="dialogue-block">
       <p class="character">WAITER</p>
       <p class="dialogue">"How did you find out about us?"</p>
     </div>
     <div class="dialogue-block">
       <p class="character">GIRL C</p>
-      <p class="parenthetical">(background, as the others approach)</p>
       <p class="dialogue">"Gontrel."</p>
-    </div>
-    <div class="dialogue-block">
-      <p class="character">GIRL A</p>
-      <p class="dialogue">"Should have just used that."</p>
-    </div>
-    <div class="dialogue-block">
-      <p class="character">GIRL C (V.O.)</p>
-      <p class="parenthetical">(voice over)</p>
-      <p class="dialogue">"Stop scrolling. Start eating."</p>
     </div>
   </div>
 
   <div class="closing-card">
     <p class="tagline">Gontrel</p>
-    <p class="logo-line">0:33–0:35</p>
+    <p class="logo-line">0:33–0:35 · TITLE CARD</p>
   </div>
 
   <div class="prod-note">
-    <b>Production note:</b> Turtle &amp; hare concept — Gontrel (calm/direct) vs. multi-app chaos (TikTok, Google Maps, OpenTable). Girl D's face is not shown on camera. Slogan "Stop scrolling. Start eating." is delivered as a voice over (V.O.) closing line, rather than shown as an on-screen tagline card. Total scripted runtime: 35 seconds, hitting the agreed max.
+    <b>Production note:</b> Turtle &amp; hare concept — Gontrel (calm/direct) vs. multi-app chaos (TikTok, Google Maps, OpenTable). Nail tech's face is not shown on camera. "Stop scrolling. Start eating." appears as an on-screen title card over the final wide shot. Total scripted runtime: 35 seconds, hitting the agreed max.
   </div>
 
   <div class="footer">Magnus Forever · Production Script</div>
